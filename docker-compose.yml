@@ -18,7 +18,9 @@ services:
     ports:
       - "3000:3000"
     volumes: 
-      - //c/Users/Mateusz/Desktop/smart-brain-api:/usr/src/smart-brain-api
+      - type: bind
+        source: ./
+        target: /usr/src/smart-brain-api
 
   # Postgres
   postgres:
