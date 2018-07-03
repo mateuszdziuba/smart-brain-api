@@ -13,13 +13,14 @@ const handleProfileGet = (req, res, db) => {
 
 const handleProfileUpdate = (req, res, db) => {
   const { id } = req.params
-  const { name, age, pet } = req.body.formInput
+  const { name, age, pet, avatar } = req.body.formInput
   db('users')
   .where({ id })
   .update({
     name: name,
     age: age,
     pet: pet,
+    avatar: avatar,
    })
   .then(resp => {
     if (resp) {

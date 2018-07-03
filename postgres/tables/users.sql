@@ -7,7 +7,8 @@ CREATE TABLE users (
   entries BIGINT DEFAULT 0,
   joined TIMESTAMP NOT NULL,
   age BIGINT DEFAULT 0,
-  pet VARCHAR(100)
+  pet VARCHAR(100),
+  avatar VARCHAR(2083)
 );
 
 COMMIT;
